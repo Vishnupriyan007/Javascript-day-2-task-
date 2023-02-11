@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #f54b4b;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #e8dfdf;
+}
+
+* {
+  box-sizing: content-box
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f5ebeb;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: rgb(247, 107, 107);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: center;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 5%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   scroll-padding-right:20px ;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Difference between javascript document and window object.</h2>
+</div>
+
+<div class="card"></div>
+<h2>before going inside this concept let us know some details. </h2>
+<p>The first thing that gets loaded into the browser is the window and the properties related to that window are stored in the window object. Properties related to window objects are length, innerWidth, innerHeight, caches, etc.
+  There was a document object too so what about it then?
+  So after the window gets loaded then there’s a document (HTML, PHP, or another document) loaded inside that window, and the properties related to that document is stored in the document object. Properties related to document objects are title, URL, cookie, etc.
+  </p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Javascript window</h2>
+      <h5>What is javascript window?</h5>
+        <p><b>The window is at a root/top level at the JavaScript object hierarchy. It  is a global/root object in JavaScript and it is the root object of the Document object model(DOM); </b></p>
+      
+    </div>
+    <div class="card">
+      <h2>JavaScript document</h2>
+      <h5>What is JavaScript document?</h5>
+      <p><b>A document is an object inside the window object and we use a document object for manipulation inside the document.</b>  </p>
+    </div>
+  
+  <div class="table">
+<div class="leftcolumn">
+  <div class="card" >
+
+    <h2>window</h2>
+<ul>
+<li>It represents the browser window in which you are seeing the content.</li>
+<li>The properties related to it are stored in the window object.</li>
+
+<li>It is loaded before the document because window container document.</li>
+<li>The window is the global element for all objects, functions, etc.</li>
+<li>It is an object of the browser.</li>
+<li>We can access document object properties inside the window.</li>
+<li>logically:
+
+  window:{
+      document:{properties}
+  }
+
+</li>
+<li>Example: window.document.title will return the title of the document</li>
+<h2>Document</h2>
+</ul>
+<ul>
+<li>It represents the document loaded inside the window or browser.</li>
+<li>The properties related to it are stored in the document object.	</li>
+<Li>It is loaded after the loading window because the window contains a document.	</Li>
+<li>It is the root element of the document object model.	</li>
+<li>It is an object of window.	</li>
+<li>We can not access windows objects properties inside the document.	</li>
+<li>logically:
+
+  document:{ properties}
+  
+  </li>
+<li>Example: document.title will return the title of the document	</li>
+</ul>
+<p><b>There are some examples for objects and document</b></p>
+<ul>
+  <li>Syntax:</li>
+
+  window object:
+  window.propertyname;<br>
+  document object:
+  document.propertyname<br>
+  // OR
+  window.document.propertyname
+
+
+    
+
+
+</div>
+</ul>
+
+
+
+<div class="footer"></div>
+<div class="leftcolumn"></div>
+<div class="card"></div>
+<h2>Thank you for visiting my blog I Hope the blog is useful</h2>
+
+
+  </div>
+  </div>
+
+
+</body>
+</html>
